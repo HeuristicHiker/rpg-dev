@@ -103,7 +103,7 @@ func LoadHistory() (*History, error) {
 		cmd := parts[1]
 
 		commands = append(commands, cmd)
-		cmdXP := xp.CalculateXPFromCommand(cmd)
+		cmdXP, _ := xp.CalculateXPFromCommand(cmd)
 		currentXP += cmdXP
 
 		if cmdXP > 0 {
